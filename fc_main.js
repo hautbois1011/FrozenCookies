@@ -2183,22 +2183,24 @@ function autoGodzamokAction()
     {
 	    if ((FrozenCookies.autoGodzamok >= 1) && Game.Objects['Cursor'].amount >= 10)
 		{
-			var count = Game.Objects['Cursor'].amount; 	
+			var count = Game.Objects['Cursor'].amount;
 			Game.Objects['Cursor'].sell(count); 
 		}
         if ((FrozenCookies.autoGodzamok >= 1) && Game.Objects['Farm'].amount >= 10)
 		{
-			var count2 = Game.Objects['Farm'].amount-1; 	
+			var count2 = Game.Objects['Farm'].amount-1;
 			Game.Objects['Farm'].sell(count2); 
 		}
 		
         if ((FrozenCookies.autoGodzamok >= 1) && Game.Objects['Cursor'].amount < 10) 
 		{
+			var count = Game.Objects['Cursor'].amount;
 			Game.Objects['Cursor'].buy(count);
 		}
 		
         if ((FrozenCookies.autoGodzamok >= 1) && Game.Objects['Farm'].amount < 10) 
 		{
+			var count2 = Game.Objects['Farm'].amount-1;
 			Game.Objects['Farm'].buy(count2);
 		}
     }
